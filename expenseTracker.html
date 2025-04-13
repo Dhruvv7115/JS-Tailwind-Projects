@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="./output.css">
+  <style>
+    li{
+      background-color: #305b87;
+      padding: 16px 20px;
+      border-radius: 10px;
+      font-size: 20px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body class="flex min-h-screen items-center justify-center text-white bg-black">
+  <div class="p-8 rounded-2xl bg-[#1c3044]">
+    <h1 class="font-bold text-5xl mb-8 text-center">Expense Tracker</h1>
+    <form id="expense-form" class="grid grid-cols-2 gap-x-4 gap-y-8">
+      <input type="text" placeholder="Expense name" id="expense-name" class="col-span-1 px-[20px] py-[16px] outline-none bg-[#305b87] text-gray-200 rounded-2xl">
+      <input type="number" placeholder="Amount" id="expense-amount"
+      class="col-span-1 px-[20px] py-[16px] outline-none bg-[#305b87] text-gray-200 rounded-2xl">
+      <button class="block bg-[#ffd814] text-gray-950 col-span-2 w-[35%] m-auto py-[12px] rounded-4xl mb-4" type="submit">Add Expense</button>
+    </form>
+    <h2 class="font-bold text-4xl mb-4 text-center">Expenses</h2>
+    <ul id="expense-list">
+      <!-- expenses will be added here through DOM -->
+    </ul>
+    <div id="total" class="">
+      <p class="text-2xl text-center mb-2">Total: $<span id="total-amount">0.00</span></p>
+    </div>
+  </div>
+  <script src="./expenseTracker.js"></script>
+</body>
+</html>

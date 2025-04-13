@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUIZ APP</title>
+  <link rel="stylesheet" href="output.css">
+  <style>
+    li{
+      background-color: #525252;
+      border-radius: 10px;
+      padding: 12px 28px;
+      width: 350px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      text-align: center;
+      transition: hover 0.25s ease-in-out;
+    }
+    li:hover{
+      background-color: #9333ea;
+    }
+    .selected{
+      background-color: #6b21a8;
+      position: relative;
+    }
+    .selected::before{
+      content: '☑️';
+      position: absolute;
+      top: 12px;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-amber-50 flex items-center justify-center min-h-screen">
+  <div class="bg-neutral-800 p-8 flex flex-col items-center justify-center gap-8 rounded-2xl w-120">
+    <h1 class="font-extrabold text-6xl">QUIZ APP</h1>
+    <div class="flex flex-col items-center justify-center">
+      <div id="question-container" class="hidden flex-col items-center justify-center">
+        <h2 class="text-2xl font-bold mb-4 text-center" id="question-text"></h1>
+        <ul id="options-list">
+          <!-- options will be displayed here -->
+        </ul>
+        <button class="bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-700 transition-all font-bold mb-4" id="next-btn">Next Question</button>
+      </div>
+      <div id="result-container" class="hidden flex-col items-center justify-center gap-4">
+        <h2 class="font-bold text-3xl">Your Score:</h2>
+        <p class="text-2xl" id="score"></p>
+        <button class="bg-purple-600 px-4 py-2 rounded-lg hover:bg-purple-700 transition-all font-bold mb-4" id="restart-btn">Restart Quiz</button>
+      </div>
+      <button class="bg-purple-600 px-4 py-2 rounded-2xl hover:bg-purple-700 hover:shadow-[0px_10px_20px_rgba(0,0,0,0.5)] hover:-translate-y-[7px] transition-all font-bold" id="start-btn">Start Quiz</button>
+    </div>
+  </div>
+  <script src="./quizApp.js"></script>
+</body>
+</html>

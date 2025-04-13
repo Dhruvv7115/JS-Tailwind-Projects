@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="./output.css">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-neutral-900">
+  <div class="bg-neutral-700 p-8 rounded-2xl ">
+    <h1 class="font-bold text-4xl  text-center text-amber-50">Weather App</h1>
+    <div class="mt-4">
+      <input type="text" name="" id="city-input" placeholder="Enter the city" class="text-amber-50 outline-none bg-stone-600 px-4 py-4 rounded-lg w-[300px] mr-4">
+      <button id="get-weather-button" class="bg-purple-800 px-4 py-4 text-white rounded-lg">Get Weather</button>
+    </div>
+    <div id="weather-info" class="hidden">
+      <h2 id="city-name" class="text-3xl text-amber-50 font-bold text-center mt-[40px]"></h2>
+      <p id="temperature" class="text-2xl text-amber-50 font-semibold text-center mt-[20px]"></p>
+      <p id="description" class="text-2xl text-amber-50 font-semibold text-center mt-[20px]"></p>
+    </div>
+    <p class="hidden mt-[20px] text-red-500 text-center text-xl" id="error">City not found. Please try again.</p>
+  </div>
+  <script src="./weatherApp.js"></script>
+</body>
+</html>
